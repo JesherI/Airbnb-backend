@@ -54,9 +54,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
+CORS_ALLOWED_ALL_ORIGINS = True
+
+
 REST_AUTH = {
     "USE_JWT": True,
-    "JWT_AUTH_HITTPONLY": False
+    "JWT_AUTH_HTTPONLY": False
 }
 
 
@@ -82,7 +85,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
 
     'corsheaders',
-    
+
     'property',
     'useraccount',
 ]
@@ -169,6 +172,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_ROOT = 'static/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

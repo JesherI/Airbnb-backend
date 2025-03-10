@@ -1,8 +1,8 @@
 import uuid
 
-from django.conf import settings
-from django.contrib.auth.models import AbstractUser, PermissionsMixin, UserManager
-from django.db import models
+from django.conf import settings # type: ignore
+from django.contrib.auth.models import AbstractUser, PermissionsMixin, UserManager # type: ignore
+from django.db import models # type: ignore
 
 class CustomUserManager(UserManager):
     def _create_user(self, name, email, password, **extra_fields):
